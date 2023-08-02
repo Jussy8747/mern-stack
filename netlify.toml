@@ -1,0 +1,3 @@
+[build]
+  command = "npm run build"  # Change this to your build command
+  functions = "functions"    # The directory where serverless functions are located
