@@ -1,0 +1,84 @@
+POST http://localhost:5000/users/register HTTP/1.1
+content-type: application/json
+
+{
+    "name": "justice",
+    "email":"uzo@gmail.com",
+    "password" : "123456"
+    
+}
+
+
+###
+
+POST http://localhost:5000/users/signin HTTP/1.1
+content-type: application/json
+
+{
+    "email":"hitz@gmail.com",
+     "password" : "123456"
+}
+
+###
+
+GET http://localhost:5000/users/profile HTTP/1.1
+
+###
+GET http://localhost:5000/users/auth/logout HTTP/1.1
+
+###
+
+POST http://localhost:5000/users/logout HTTP/1.1
+
+###
+
+GET http://localhost:5000/users/getTodo?dayofweek=Monday HTTP/1.1
+
+###
+GET http://localhost:5000/users/getTodo HTTP/1.1
+
+###
+
+POST http://localhost:5000/users/addTodo HTTP/1.1
+content-type: application/json
+
+{
+    
+    "todo": "buy soup #300 from mama nkechi shop while coming back from work",
+    "dayOfWeek": "Monday"
+    
+}
+
+
+###
+
+DELETE  http://localhost:5000/users/64acba5cbffd47dfef46e8c8 HTTP/1.1
+
+###
+DELETE  http://localhost:5000/users/clear/:Monday HTTP/1.1
+
+###
+
+GET http://localhost:5000/users/search?query=z HTTP/1.1
+
+
+###
+
+GET http://localhost:5000/users/search/dayofweek?dayofweek=Monday&query=z HTTP/1.1
+
+###
+GET http://localhost:5000/users/auth/google HTTP/1.1
+
+
+###
+GET http://localhost:5000/users/login/google HTTP/1.1
+
+
+###
+POST http://localhost:5000/users/reset-password HTTP/1.1
+content-type: application/json
+
+{
+    "token":"123456",
+    
+}
